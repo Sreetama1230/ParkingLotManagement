@@ -83,6 +83,5 @@ VehicleType is an enum type
 
 + findAvaiableSport(VehicleType) : ParkingSpot
 + releaseSpot(ParkingSpot)
-<br>
-findAvaiableSport() - find across all the levels.
+<br>findAvaiableSport() - find across all the levels.
 
