@@ -48,21 +48,21 @@ public class Driver {
 		Ticket ticket = entryGate.issueTicket(car);
 		
 		
-		Vehicle bike = new Bike("DD-01-1234", VehicleType.BIKE);
-
-
-		ParkingSpot assignedSpotBike = spotManager.findAvailableSpot(bike.getVehicleType());
-		System.out.println(assignedSpotBike.getSpotId());
-		assignedSpotBike.assignVehicle(bike);
-		Ticket ticketBike = entryGate.issueTicket(bike);
-	
-		Vehicle car1 = new Car("KA-01-1235", VehicleType.CAR);
-
-
-		ParkingSpot assignedSpot1 = spotManager.findAvailableSpot(car1.getVehicleType());
-		assignedSpot1.assignVehicle(car1);
-		System.out.println(assignedSpot1.getSpotId());
-		Ticket ticket1 = entryGate.issueTicket(car1);
+//		Vehicle bike = new Bike("DD-01-1234", VehicleType.BIKE);
+//
+//
+//		ParkingSpot assignedSpotBike = spotManager.findAvailableSpot(bike.getVehicleType());
+//		System.out.println(assignedSpotBike.getSpotId());
+//		assignedSpotBike.assignVehicle(bike);
+//		Ticket ticketBike = entryGate.issueTicket(bike);
+//	
+//		Vehicle car1 = new Car("KA-01-1235", VehicleType.CAR);
+//
+//
+//		ParkingSpot assignedSpot1 = spotManager.findAvailableSpot(car1.getVehicleType());
+//		assignedSpot1.assignVehicle(car1);
+//		System.out.println(assignedSpot1.getSpotId());
+//		Ticket ticket1 = entryGate.issueTicket(car1);
 		
 		
 //		Vehicle car2 = new Car("KA-01-1235", VehicleType.CAR);
@@ -72,11 +72,12 @@ public class Driver {
 //		System.out.println(assignedSpot2.getSpotId());
 //		Ticket ticket2 = entryGate.issueTicket(car2);
 
-		System.out.println("Ticket status: " + ticket1.getTicketStatus());
-		System.out.println("Spot " + assignedSpot1.getSpotId() + " is free: " + assignedSpot1.isFree());
+//		System.out.println("Ticket status: " + ticket1.getTicketStatus());
+//		System.out.println("Spot " + assignedSpot1.getSpotId() + " is free: " + assignedSpot1.isFree());
 	
 		
 		Payment payment = exitGate.processPayment(ticket, PaymentMode.CARD);
+		payment.processPayment();
 		spotManager.releaseSpot(assignedSpot);
 
 		System.out.println("Payment processed: " + payment.getAmount() + " via " + payment.getPaymentMode());

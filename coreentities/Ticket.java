@@ -70,18 +70,11 @@ public class Ticket {
 
 	public double calculateFee() {
 		ParkingRate parkingRate = new ParkingRate();
-		try {
-			Thread.sleep(20000);
-			this.setExitTime(LocalDateTime.now());
+	
 			return parkingRate.calculateFee(this.vehicleType) * 
 					ChronoUnit.MINUTES
 					.between(this.entryTime, this.exitTime);
 
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		
-		return 0;
 		
 	}
 }
