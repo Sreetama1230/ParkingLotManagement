@@ -1,5 +1,8 @@
 # Parking Lot System 
 
+
+<img width="1378" height="490" alt="image" src="https://github.com/user-attachments/assets/8716ac67-0adc-4bf7-af77-15c66a7066b5" />
+
 ## ParkingLot
 
 - name : string
